@@ -1,0 +1,124 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.child1 {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+#inpt {
+  width: 250px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  outline: none;
+}
+
+#btn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btn:hover {
+  background-color: #45a049;
+}
+
+.child2, .child3 {
+  background: white;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 400px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.child2 h1, .child3 h1, .child3 h3 {
+  margin: 10px 0;
+}
+
+#tempc {
+  font-size: 48px;
+  color: #333;
+}
+
+#place {
+  font-size: 32px;
+  color: #555;
+}
+
+.region {
+  font-size: 20px;
+  color: #777;
+}
+
+.child2 img {
+  width: 100px;
+  height: 100px;
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to weather cards */
+.child2, .child3 {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Pulse animation on hover */
+#btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Bouncing weather icon */
+.child2 img {
+  width: 100px;
+  height: 100px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
